@@ -122,6 +122,8 @@ func loadTLSConfig(minTLSVersion uint16) (*tls.Config, error) {
 		} else {
 			tlsConfig.ClientAuth = tls.VerifyClientCertIfGiven
 		}
+	} else if config.Setting.TLSRequireClientCert {
+		return nil, fmt.Errorf("TLSClientCAFile must be set when TLSRequireClientCert is enabled")
 	}
 
 	return tlsConfig, nil
