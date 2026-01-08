@@ -58,5 +58,8 @@ ScriptFolder = ""
 ScriptHEPFilter = [1, 5, 100]
 
 # TLS Configuration
-TLSCertFolder = "."
-TLSMinVersion = "1.2" 
+TLSCertFile = "/etc/heplify-server/tls/server.crt"
+TLSKeyFile = "/etc/heplify-server/tls/server.key"
+TLSClientCAFile = ""
+TLSRequireClientCert = false
+TLSMinVersion = "1.2"
